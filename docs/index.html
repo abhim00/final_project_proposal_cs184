@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+    border-style: double;
+    border-color: blue;
+  }
+  h1, h1, h1, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 Real Time Facial Color Correction Proposal</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h1 align="middle">CS 184 Final Proposal: Real Time Facial Color Correction</h1>
+
+<h2><u> Teammmates </u></h2>
+
+<p> In this project, we aim to figure out real-time techniques of color correcting faces that are
+     non-optimally lit either by irregular lighting or dim lighting.
+
+</p>
+
+<p> Our team is: </p>
+
+<ul>
+    <li> Melody Sifry </li>
+    <li> Somya Mohindra </li>
+    <li> Abhishek Mahesh </li>
+    <li> Anuj Shah </li>
+</ul>
+
+<h2><u> Problem Description </u></h2>
+
+<p> (skip to end of parenthesis if you’re in a hurry)</p>
+<p>
+    [Consider this - it’s 5 PM, you’ve been working non-stop since lunch break, 
+    and you’ve got one last meeting for the day. Since this last meeting is just a quick check in with your team members, you’ve decided that you’re going to let your hair down and take this meeting from your newly purchased Ikea EZ chair that's seductively grinning at you in the glory of the golden hour (it’s late in the year). You’re excited. You grab your laptop and set yourself up on the chair with a pillow in your lap and the lappy on the pillow. Open the lapt..oops ‘Low Battery”. “It’s alright,” you console yourself.. You quickly grab your charger and reset yourself in the chair. Open your Calendar app and click the zoom link. It’s loading... “wow, this is going to be a relaxing last meeting of the day. I’m excited to tell my team about the extra funding we’re getting,” you’re thinking. The meeting opens, you see your all your teammates’ beautiful faces but wait..what..no..come on..you look like this - 
+</p>
+<table style="width=100%">
+    <tr>
+      <td>
+        <img src="anujproposalpic.png" width="480px" />
+      </td>
+    </tr>
+  </table>
+<p>
+    Your neighbor, through his window, is better lit than you are. There are heavy dark shadows on your face. “How can i be communicating such good news from this place of darkness,” you think to yourself. You don’t want to leave the EZ chair but you have to. Sucks, right?]
+</p>
+What if you didn’t have to worry about the lighting when getting onto a virtual meeting? Wouldn’t that be awesome. You wouldn’t be stuck on your claustrophobia-inducing studio-like desk all day, but could take video meetings from anywhere in your house! This is the problem we’re trying to solve in this project - namely, color correcting irregularly/dimly lit faces in real time.
+<p>
+To do this, we first roughly extract the face region and rectify the skin color distribution in a color space. Then, we perform color and brightness correction around the face in the original image to achieve a proper color balance of the facial image, which is not affected by luminance and background colors. The main challenge in solving the problem is ensuring that this is done in real time i.e. for live video streams.
+
+</p>
+
+<h2> <u>Goals and Deliverables</u> </h2>
+
+<h4> What we plan to achieve: </h4>
+
+<p> 
+    We will take pictures or headshots of people of different races and backgrounds, extract the face region and rectify the skin color distribution, and perform color and brightness correction so the image is not affected by luminance and background color. 
+</p>
+<p>
+    Quality and performance can be measured by the clarity of someone’s face in the headshot pictures. This product should work on all races and backgrounds. We expect that making this demo work for all backgrounds and races might be challenging. 
+</p>
+
+<h4> What we hope to achieve: </h4>
+<p> 
+    If we can successfully finish part 1, we would like to test that our product works for real time video streams. This means that when we move around or switch backgrounds, the algorithm automatically rebalances and brightens our faces. 
+</p>
+<p>
+    Quality and performance metrics include clear live stream images where our faces are not obscured. The runtime of the product should not significantly increase when we switch to video streaming from simple camera work (as outlined in part 1). 
+</p>
+
+<h2> <u>Schedule </u> </h2>
+
+<h4> Week 1: April 12 - April 18 </h4>
+<ul>
+    <li> Independently finish the cloth simulation project (project 4).</li>
+    <li> Extract the face region using Viola-Jones algorithm.</li>
+    <li> identify the true skin color using k-means clustering.</li>
+</ul>
+
+<h4> Week 2: April 19 - April 25 </h4>
+
+<ul>
+    <li> Perform color and brightness correction around the face in the original image to achieve a proper color balance of the facial image. We will do this using Piet’s color distribution transfer and by editing luminance.</li>
+
+
+</ul>
+
+<h4> Week 3: April 26 - May 2</h4>
+
+<ul>
+    <li> Use guide image filtering to smooth edges and bring the face region skin color back to a normal guide skin color.  </li>
+</ul>
+
+<h4> Week 4: May 3 - May 7</h4>
+
+<ul>
+    <li> Work on stretch goals and wrap up project loose ends.</li>
+    <li> Write up the presentation slides and setup for the presentation.</li>
+</ul>
+
+<h2><u> Resources </u> </h2>
+
+<ul>
+    <li><a href="https://www.mdpi.com/2624-6120/2/3/33">Guided Facial Skin Color Correction</a></li>
+    <li><a href="https://ieeexplore.ieee.org/document/4359322">A Closed-Form Solution to Natural Image Matting</a></li>
+    <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1077314206002189?via%3Dihub">Automated color grading using color distribution transfer</a></li>
+    
+</ul>
+
+</body>
+</html>
